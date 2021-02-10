@@ -1,15 +1,15 @@
 class Team
   attr_reader :name, :motto
 
-  TEAMS = []
+  @@all = []
 
   def initialize(params)
     @name = params[:name]
     @motto = params[:motto]
-    TEAMS << self
+    @@all << self
   end
 
   def self.all
-    TEAMS
+    @@all
   end
 end
